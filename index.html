@@ -30,10 +30,76 @@
                     <div class= "hero-buttons">
                         <button class="btn-primary" onclick="openTab(event, 'FeaturedProjects')">View My Work</button>
                     <button class="btn-secondary" onclick="openTab(event, 'Contact')">Get In Touch</button>
-                        <div/>
                 </div>
+                    </div>
                 <img src="image.jpg" alt="me">
+            </section>
+
+        <!--FEATURED PROJECTS -->
+        <section class="tab-content" id="FeaturedProjects">
+            <div class="section-wrapper">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A selection of work that showcases my skills in IoT and UI/UX design.</p>
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/highfid.png" alt="Project 1" onerror="this.style.display='none'">
+                            <div class="project-overlay">
+                                <button onclick="openImage('images/highfid.png')" class="demo-link">View</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Aure Daily Task Tracker UI/UX</h3>
+                            <div class="tech-stack">
+                                <span>Figma</span>
+                                <span>UI/UX</span>
+                                <span>High Fidelity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/lowfid.png" alt="Project 2" onerror="this.style.display='none'">
+                            <div class="project-overlay">
+                                <button onclick="openImage('images/lowfid.png')" class="demo-link">View</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Daily Dew Task Tracker UI/UX</h3>
+                            <div class="tech-stack">
+                                <span>Figma</span>
+                                <span>UI/UX</span>
+                                <span>Low Fidelity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/raspi.jpg" alt="Project 3" onerror="this.style.display='none'">
+                            <div class="project-overlay">
+                                <button onclick="openImage('images/raspi.jpg')" class="demo-link">View</button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Simple Raspberry Pi Project using Breadboard and LEDs</h3>
+                            <div class="tech-stack">
+                                <span>IoT</span>
+                                <span>Raspberry Pi</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+            
+                
 
     <script src="js/script.js"></script>
 </body>
