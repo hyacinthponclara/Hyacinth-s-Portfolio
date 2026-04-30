@@ -172,7 +172,7 @@ body {
 }
 
 .btn-primary {
-    margin-left: 25rem;
+    margin-left: 8rem;
     background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
     color: white;
     border: none;
@@ -627,6 +627,7 @@ body {
 }
 
 .submit-btn {
+    margin-left: 25rem;
     align-self: flex-start;
     margin-top: 0.5rem;
 }
