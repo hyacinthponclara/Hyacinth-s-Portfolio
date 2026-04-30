@@ -5,10 +5,8 @@ function openTab(event, tabName) {
     document.querySelectorAll('.tablinks').forEach(btn => {
         btn.classList.remove('active');
     });
-
     document.getElementById('hero').style.display = 'none';
     document.getElementById('backBtn').style.display = 'inline-block';
-
     const target = document.getElementById(tabName);
     target.style.display = 'block';
     event.currentTarget.classList.add('active');
@@ -21,7 +19,6 @@ function goHome() {
     document.querySelectorAll('.tablinks').forEach(btn => {
         btn.classList.remove('active');
     });
-
     document.getElementById('hero').style.display = 'flex';
     document.getElementById('backBtn').style.display = 'none';
 }
@@ -31,6 +28,10 @@ function openImage(src) {
     const img = document.getElementById('lightbox-img');
     img.src = src;
     overlay.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
