@@ -1,17 +1,18 @@
 export default {
     async fetch(request) {
+
+        const corsHeaders = {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'POST, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type',
+        };
+
         if (request.method === 'OPTIONS') {
-            return new Response(null, {
-                headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-                    'Access-Control-Allow-Headers': 'Content-Type',
-                }
-            });
+            return new Response(null, { headers: corsHeaders });
         }
 
         if (request.method !== 'POST') {
-            return new Response('Method not allowed', { status: 405 });
+            return new Response('Method not allowed', { status: 405, headers: corsHeaders });
         }
 
         try {
@@ -21,21 +22,21 @@ export default {
             if (!name || !email || !message) {
                 return new Response(JSON.stringify({ error: 'Missing fields' }), {
                     status: 400,
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*'
-                    }
+                    headers: { 'Content-Type': 'application/json', ...corsHeaders }
                 });
             }
 
-            await fetch('https://api.mailchannels.net/tx/v1/send', {
+            const emailRes = await fetch('https://api.mailchannels.net/tx/v1/send', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     personalizations: [{
                         to: [{ email: 'ponclara.hyacinthrose@gmail.com', name: 'Hyacinth Rose' }]
                     }],
-                    from: { email: 'noreply@hyacinthportoflio.hyacinth-rose-ponclara.workers.dev', name: name },
+                    from: {
+                        email: 'noreply@hyacinthportoflio.hyacinth-rose-ponclara.workers.dev',
+                        name: name
+                    },
                     reply_to: { email: email, name: name },
                     subject: subject || `New message from ${name}`,
                     content: [{
@@ -45,20 +46,17 @@ export default {
                 })
             });
 
+            console.log('MailChannels status:', emailRes.status);
+
             return new Response(JSON.stringify({ success: true }), {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*'
-                }
+                headers: { 'Content-Type': 'application/json', ...corsHeaders }
             });
 
         } catch (err) {
-            return new Response(JSON.stringify({ error: 'Failed to send' }), {
+            console.error('Worker error:', err);
+            return new Response(JSON.stringify({ error: err.message }), {
                 status: 500,
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*'
-                }
+                headers: { 'Content-Type': 'application/json', ...corsHeaders }
             });
         }
     }
