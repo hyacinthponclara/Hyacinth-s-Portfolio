@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyacinth Rose Ponclara Portfolio</title>
+    <title>Hyacinth Rose Ponclara | IT Student & UI/UX Designer</title>
+    <meta name="description" content="IT Student specializing in IoT and UI/UX Design. Explore my projects and skills.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <header class="header">
         <nav class="nav-tabs">
-            <div class="logo">
-                <h1 class="name">Hyacinth</h1>
+            <div class="left-nav">
+                <button id="backBtn" onclick="goHome()" style="display:none;">←</button>
+                <h1 class="name">Hyacinth Rose Ponclara</h1>
             </div>
             <div class="nav-buttons">
                 <button class="tablinks" onclick="openTab(event, 'FeaturedProjects')">Featured Projects</button>
-                <button class="tablinks" onclick="openTab(event, 'SkillsExperiences')">Skills and Experiences</button>
+                <button class="tablinks" onclick="openTab(event, 'SkillsExperiences')">Skills & Experience</button>
                 <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
             </div>
         </nav>
     </header>
 
     <main class="main-content">
-            <section class="main id="hero">
-                <div class="container">
-                    <h2>Hi, I'm Hyacinth Rose!</h2>
-                    <h1>IT STUDENT</h1>
-                    <p>I am currently a third-year Bachelor of Science in Information Technology student, majoring in Internet of Things (IoT). Through my specialization, I have developed the ability to create basic projects using Raspberry Pi. Additionally, I have a strong focus on UI/UX design, with hands-on experience using Figma to develop user-centered interfaces.</p>
-                    <div class= "hero-buttons">
-                        <button class="btn-primary" onclick="openTab(event, 'FeaturedProjects')">View My Work</button>
+
+        <!-- HERO SECTION -->
+        <section class="main" id="hero">
+            <div class="container">
+                <h2>Hi, I'm Hyacinth Rose!</h2>
+                <h1>IT STUDENT</h1>
+                <p>I am currently a third-year Bachelor of Science in Information Technology student, majoring in
+                    Internet of Things (IoT). Through my specialization, I have developed the ability to create basic
+                    projects using Raspberry Pi. Additionally, I have a strong focus on UI/UX design, with hands-on
+                    experience using Figma to develop user-centered interfaces.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="openTab(event, 'FeaturedProjects')">View My Work</button>
                     <button class="btn-secondary" onclick="openTab(event, 'Contact')">Get In Touch</button>
                 </div>
-                    </div>
-                <img src="HayaPortfolioPics/me.png" alt="me">
-            </section>
+            </div>
+            <img src="HayaPortfolioPics/me.png" alt="Hyacinth Rose Ponclara" class="me">
+        </section>
 
-        <!--FEATURED PROJECTS -->
+        <!-- FEATURED PROJECTS TAB -->
         <section class="tab-content" id="FeaturedProjects">
             <div class="section-wrapper">
                 <h2 class="section-title">Featured Projects</h2>
@@ -45,9 +55,11 @@
                     <!-- Project 1 -->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="HayaPortfolioPics/highfid.png" alt="Project 1" onerror="this.style.display='none'">
+                            <img src="HayaPortfolioPics/highfid.png" alt="Project 1"
+                                onerror="this.style.display='none'">
                             <div class="project-overlay">
-                                <button onclick="openImage('HayaPortfolioPics/highfid.png')" class="demo-link">View</button>
+                                <button onclick="openImage('HayaPortfolioPics/highfid.png')"
+                                    class="demo-link">View</button>
                             </div>
                         </div>
                         <div class="project-info">
@@ -65,7 +77,8 @@
                         <div class="project-image">
                             <img src="HayaPortfolioPics/lowfid.png" alt="Project 2" onerror="this.style.display='none'">
                             <div class="project-overlay">
-                                <button onclick="openImage('HayaPortfolioPics/lowfid.png')" class="demo-link">View</button>
+                                <button onclick="openImage('HayaPortfolioPics/lowfid.png')"
+                                    class="demo-link">View</button>
                             </div>
                         </div>
                         <div class="project-info">
@@ -83,11 +96,12 @@
                         <div class="project-image">
                             <img src="HayaPortfolioPics/raspi.jpg" alt="Project 3" onerror="this.style.display='none'">
                             <div class="project-overlay">
-                                <button onclick="openImage('HayaPortfolioPics/raspi.jpg')" class="demo-link">View</button>
+                                <button onclick="openImage('HayaPortfolioPics/raspi.jpg')"
+                                    class="demo-link">View</button>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>Simple Raspberry Pi Project using Breadboard and LEDs</h3>
+                            <h3>Simple Raspberry Pi Project using Arduino</h3>
                             <div class="tech-stack">
                                 <span>IoT</span>
                                 <span>Raspberry Pi</span>
@@ -95,12 +109,206 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
-            
-                
+
+        <!-- SKILLS AND EXPERIENCES -->
+        <section class="tab-content" id="SkillsExperiences">
+            <div class="section-wrapper">
+                <h2 class="section-title">Skills & Experience</h2>
+                <p class="section-subtitle">My technical abilities, trainings, and academic background.</p>
+
+                <div class="skills-grid">
+
+                    <!-- Column 1: Education + Experience -->
+                    <div class="skills-column">
+                        <h3>Education</h3>
+                        <div class="experience-item">
+                            <div class="exp-header">
+                                <h4>BS Information Technology</h4>
+                                <span class="exp-year">Present</span>
+                            </div>
+                            <p class="exp-meta">Major in Internet of Things · 3rd Year · CPU, Iloilo City</p>
+                            <p>Studying core IT principles with a focus on IoT systems, networking, and UI/UX design.
+                            </p>
+                        </div>
+
+                        <h3 style="margin-top: 2rem;">Experience</h3>
+                        <div class="experience-item">
+                            <div class="exp-header">
+                                <h4>Media Officer</h4>
+                                <span class="exp-year">2025–Present</span>
+                            </div>
+                            <p class="exp-meta">Search Christian Youth Gospel Organization · Volunteer</p>
+                            <ul class="exp-list">
+                                <li>Managed and maintained the organization's social media account</li>
+                                <li>Designed promotional materials for events and announcements</li>
+                                <li>Edited photos and visual contents</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <div class="exp-header">
+                                <h4>Front Desk Assistant / Cashier</h4>
+                                <span class="exp-year">2021–2022</span>
+                            </div>
+                            <p class="exp-meta">Lulay's Farmview Resort · Work Experience</p>
+                            <ul class="exp-list">
+                                <li>Provided customer support and handled cash transactions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Technical Skills + Tools -->
+                    <div class="skills-column">
+                        <h3>Technical Skills</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-row">
+                                    <span class="skill-name">Figma / UI Design</span>
+                                    <span class="skill-pct">60%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width:60%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span class="skill-name">Raspberry Pi / IoT</span>
+                                    <span class="skill-pct">45%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width:45%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span class="skill-name">HTML / CSS</span>
+                                    <span class="skill-pct">35%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width:35%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-pct">25%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width:25%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-row">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-pct">35%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width:35%"></div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h3 style="margin-top: 2rem;">Tools & Platforms</h3>
+                        <div class="tools-grid">
+                            <span class="tool-tag">Figma</span>
+                            <span class="tool-tag">Canva</span>
+                            <span class="tool-tag">GitHub</span>
+                            <span class="tool-tag">VS Code</span>
+                            <span class="tool-tag">Raspberry Pi</span>
+                            <span class="tool-tag">Cloudflare</span>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Certifications -->
+                    <div class="skills-column cert-column">
+                        <h3>Certifications & Trainings</h3>
+                        <div class="experience-item">
+                            <div class="exp-header">
+                                <h4>Based Build Program</h4>
+                                <span class="exp-year">2025</span>
+                            </div>
+                            <p class="exp-meta">Blockchain</p>
+                            <p>A blockchain-based certificate program.</p>
+                        </div>
+                        <!-- Add more certifications the same way -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="tab-content" id="Contact">
+            <div class="section-wrapper contact-wrapper">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have a project in mind or just want to connect? Send me a message.</p>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell me about your project or idea."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary submit-btn">Send Message</button>
+                    <p class="form-status" id="formStatus"></p>
+                    <div class="contact-links">
+                        <h4 class="contact-links-label">You can also contact me on</h4>
+                        <div class="contact-links-row">
+                            <a href="https://www.linkedin.com/in/hyacinth-rose-ponclara-20090b405/" target="_blank"
+                                class="contact-link">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+                                    alt="LinkedIn">
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/hyacinthponclara" target="_blank" class="contact-link">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.facebook.com/share/1CfydkYKRP/?mibextid=wwXIfr" target="_blank"
+                                class="contact-link">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
+                                    alt="Facebook">
+                                <span>Facebook</span>
+                            </a>
+                            <a href="mailto:ponclara.hyacinthrose@gmail.com" class="contact-link">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Gmail">
+                                <span>Gmail</span>
+                            </a>
+                        </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Hyacinth Rose Ponclara · Built with HTML, CSS & JS · Hosted on Cloudflare Pages</p>
+    </footer>
+
+    <div id="lightbox"
+        style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center;">
+        <span onclick="closeLightbox()"
+            style="position:absolute; top:1.5rem; right:2rem; font-size:2.5rem; color:white; cursor:pointer;">&times;</span>
+        <img id="lightbox-img" src="" alt="Project Preview"
+            style="max-width:90%; max-height:90vh; border-radius:12px; object-fit:contain;">
+    </div>
 
     <script src="main.js"></script>
 </body>
+</body>
+
 </html>
