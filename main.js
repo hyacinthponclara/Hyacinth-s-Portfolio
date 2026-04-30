@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const subject = document.getElementById('subject').value;
                 const message = document.getElementById('message').value;
 
-                const res = await fetch('https://hyacinthportoflio.hyacinth-rose-ponclara.workers.dev/', {
+                const res = await fetch('https://hyacinth-contact.hyacinth-rose-ponclara.workers.dev/', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ name, email, subject, message })
